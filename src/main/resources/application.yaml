@@ -1,0 +1,60 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /elibrary
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+  security:
+    enabled: false
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/librarydb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+  mail:
+    host: smtp.gmail.com
+    username: demirli2003@gmail.com
+    password: ncymtrwkftvugftd
+    port: 465
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+#    host: smtp.gmail.com
+#    port: 587
+#    username: demirli2003@gmail.com
+#    password: "nezabudparol"
+#    test-connection: true
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#    sender:
+#      email: e-library@gmail.com
+#      text: Register to our library
+
+#  security:
+#    user:
+#      name: seva
+#      password: seva123
